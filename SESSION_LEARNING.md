@@ -1,0 +1,27 @@
+# Save and learn at End Session
+
+End Session first stops capture and active generation, then commits the current conversation, saved memories, assistant name and user name together in IndexedDB. RAG documents and reviewed feedback retain their existing explicit save/approval controls. Unreviewed corrections are not training inputs. Camera-expression-influenced turns and explicit Qwen image questions are excluded. Chat/image work is drained and voice stopped before training begins.
+
+With a fully hash-verified local model and approved trainable examples, Nexus runs its existing real output-projection LoRA trainer: full-answer DPO for preferred/rejected corrections and positive-example cross-entropy for approved helpful answers. The transformer weights remain frozen. This is output-head adaptation, not full-transformer LoRA or automatic training support for every architecture. Existing compatible approved factors continue with fresh optimizer state; the immutable base remains the DPO reference. A retained-rank mismatch stops safely instead of discarding prior factors. Training is local and does not call the online teacher. Previously captured teacher responses can become examples only through the same review and approval flow.
+
+Promotion requires complete-answer held-out improvement against the base and previous head, at least two independent held-out prompt families, pair-specific held-out gates when corrections are present, and separate fixed-regression checks. The model-specific checkpoint retains the active and previous adapter, bound to the full model-file SHA-256, output tensor, dimensions, and tokenizer/runtime identity. Continued adapters preserve frozen prompt-family train/held-out assignments so newly added examples cannot move previously trained families into held-out evidence. Legacy heads lacking that split provenance remain saved, but cannot continue or be reactivated under an independent-promotion claim. Equal or worse candidates are not promoted. These are narrow preference-loss checks, not a guarantee of better factual accuracy, general reasoning or every future answer.
+
+## Controls and recovery
+
+- Set Assistant name and Your name in Settings → General. Those settings are saved with the session. Existing explicit “my name is / call me” memories remain part of the consented memory system.
+- Cancel and stay stops/awaits training and keeps the session open. Any already committed snapshot remains saved. Camera and microphone do not restart automatically.
+- End without training saves first, stops/awaits any active training, and then completes shutdown.
+- An adapter owned by another subsystem is retained; session correction training is skipped until that adapter is explicitly disabled.
+- A storage, model or runtime error keeps the session open so work can be exported or retried. A failed evaluation saves its status and ends with the previous checkpoint retained.
+- In Learning, Restore this model's session checkpoint loads the saved checkpoint for the exact model-file SHA-256, re-evaluates it against current approved data and activates only if checks pass. Nothing restores an adapter merely because a filename matches.
+- Revoking, deleting or changing a source correction invalidates retained session checkpoints derived from it. Delete saved checkpoints also removes per-model session copies. Erase all learning/conversations removes the session-result record too.
+
+The latest versioned session record contains the model hash, approved-row fingerprints, options, outcome and evaluation. Personal text remains in the existing local stores. A crash during training retains the already committed snapshot and prior adapter, but the interrupted optimizer run must be restarted. Browser storage can be cleared by the browser or the user; export an ordinary workspace/adapter backup for an independent copy. The new per-model archive is local browser state and is not yet an additional multi-model backup bundle. After evaluation passes, exit controls are disabled during final durable promotion/shutdown so a late click cannot interrupt the commit boundary.
+
+## Evidence and limits
+
+`tests/session_learning_core.cjs` tests orchestration and failure boundaries. `tests/session_learning_app.cjs` runs the exact assembled app with real IndexedDB transaction/cursor semantics via fake-indexeddb. The output-head delta is added to the runtime's base logits using final hidden activations, including Gemma's post-base-softcap logits; it is not merged into transformer matrices. Its numerical cases use the actual DPO/LoRA optimizer and held-out evaluation with tiny synthetic activation vectors. They do not run a real transformer, physical GPU, camera or browser. Component receipts are in `qa/session_learning/`; [RELEASE_STATUS.md](RELEASE_STATUS.md) records the final composed identity and outcome. Hardware qualification is in [RADEON_TEST_PLAN.md](RADEON_TEST_PLAN.md).
+
+## Integration
+
+Apply `patches/session_learning/apply.py` after the lifecycle, expression, voice and model-download patches. It appends a bounded coordinator and hooks the existing real learning runtime; it does not replace inference kernels. `window.NXSessionLearning.pending` and `nexus-session-learning-state` make the pre-exit phase visible to voice/camera guards. `NXLifecycle.closing` becomes true only when the original final shutdown begins, because the existing trainer's session guard must remain valid while it runs.

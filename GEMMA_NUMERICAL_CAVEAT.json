@@ -1,0 +1,45 @@
+{
+  "scope": "Read-only analysis of existing synthetic six-layer Q4_0 host and llama.cpp output arrays. Not a new forward run, not a real Gemma27B checkpoint, and not a physical browser/GPU test.",
+  "sourceHashes": {
+    "host_q4_logits.f32": "9b28005edcc661fe33f1c032e8d788fbebea864a6514c5884c9d5279499aa813",
+    "native_q4_logits.f32": "2bc5ebaa1928cb1020dd98b442ec98bc924b8aa855913f5544f343478a7c9921"
+  },
+  "positions": 8,
+  "vocab": 288,
+  "top1Matches": 7,
+  "maxAbsoluteDifference": 0.0834474265575409,
+  "mismatches": [
+    {
+      "positionZeroBased": 2,
+      "hostTopToken": 3,
+      "hostTopLogit": 1.1942750215530396,
+      "hostSecondToken": 208,
+      "hostSecondLogit": 1.1870756149291992,
+      "hostTopTwoMargin": 0.007199406623840332,
+      "llamaCppTopToken": 147,
+      "llamaCppTopLogit": 1.2051057815551758,
+      "llamaCppSecondToken": 208,
+      "llamaCppSecondLogit": 1.1905306577682495,
+      "llamaCppTopTwoMargin": 0.01457512378692627,
+      "hostPreferenceBetweenWinners": 0.018456339836120605,
+      "llamaCppPreferenceBetweenWinners": 0.020998477935791016,
+      "rowMaxAbsoluteDifference": 0.04203158617019653
+    }
+  ],
+  "followupArithmeticIsolation": {
+    "receipt": "qa/gemma/q4_arithmetic_audit/receipt.json",
+    "receiptSha256": "8e7b8c99973ee56681abdc444e777f4c6911702b35fead54435056cf39e40a29",
+    "all80TensorValuesBitwisePreserved": true,
+    "sameTokensAndContext": true,
+    "llamaQ4ActivationDotType": "Q8_0",
+    "sameStoredWeightsViaLlamaF32": {
+      "max_abs_error": 0.0026168078184127808,
+      "rmse": 0.0005559313431663729,
+      "argmax_matches": 8,
+      "rows": 8,
+      "vocab": 288,
+      "byte_exact": false
+    },
+    "conclusion": "The same stored Q4_0/Q8_0 weight values run through llama.cpp F32 arithmetic closely match the float-activation graph; direct quantized llama.cpp uses Q8_0-quantized activations and produces the prior larger difference. This isolates arithmetic-path differences, not a change in model weights. It does not establish real-checkpoint generation quality or bitwise compatibility with every backend."
+  }
+}

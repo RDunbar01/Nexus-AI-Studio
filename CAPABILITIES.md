@@ -1,0 +1,82 @@
+# Capability and evidence matrix
+
+This is an experimental application. **Implemented** means executable computation exists for the admitted metadata/layout contract. **Qualified** requires results for the exact checkpoint, representation, browser, and device. Recognition of a model name, successful download, synthetic test, or metadata header does not establish full-model support or accuracy.
+
+The expanded release passed final composition and automated acceptance; [RELEASE_STATUS.md](RELEASE_STATUS.md) records the final HTML identity and actual aggregate results. Historical component evidence below retains its original scope. No browser was launched and no physical Radeon was tested in this work.
+
+## Backend/version/file matrix
+
+| Model/profile | Accepted route and implemented computation | Evidence and remaining boundary |
+| --- | --- | --- |
+| SmolLM / SmolLM2: 135M, 360M, 1.7B; base and Instruct | Single-file ordinary GGUF dense text graph. All twelve official configuration/tokenizer profiles have fixtures. Smol1 and Smol2 have distinct instruction framing; base files require explicit plain completion. | Real F16/Q8_0 135M host checks and bounded full-model software-WebGPU prefix checks are described below. Other full sizes/conversions are not output-qualified. Strict Smol mode does not convert files or override tensor admission. |
+| Mistral-7B-v0.3 | Inspected `llama` GGUF dense base-text profile, SentencePiece scores/tokenization, unscaled RoPE; explicit completion. | Official tokenizer and reduced numerical fixtures. No full 7B checkpoint output/browser qualification. Do not substitute an Instruct template or promise older sliding-window variants. |
+| Mistral-Small-3.2-24B-Instruct-2506 | Inspected dense text profile (`llama` in the observed export; compatible `mistral3` geometry), exact accepted Tekken/template contract; hidden and Q widths may differ. | Observed Q4_K_M header: 363 descriptors, mixed Q4_K/Q6_K. Tokenizer/template and reduced graph checks. Only a bounded metadata prefix was read; full weights/logits and Pixtral image execution were not tested. |
+| Ministral-3-14B-Reasoning-2512 | Inspected `mistral3` dense text profile, exact accepted Reasoning template, YaRN and position-dependent query temperature. | Tokenizer/template/reduced-graph and rotary checks. Full target directory was not established from its initial prefix. No full checkpoint, Pixtral image support, or all-Ministral-version claim. |
+| Gemma3 text | Single-file `gemma3` GGUF with complete supported tensor inventory and SentencePiece scores/types/template. Implements scaled embeddings, Q/K norms, separate local/global RoPE, local masks, post-attention/FFN norms, GELU FFN, tied/separate output and configured final softcap. | Actual 27B-it-QAT public header/tokenizer checked; six-layer synthetic F32/Q4_0 host and exact-WGSL software graph evidence. No real 27B logits, browser/Radeon speed, SigLIP/mmproj image path, or Gemma1/2/3n/other-generation qualification. See the numerical caveat below. |
+| GPT-oss-20B | Single-file `gpt-oss` GGUF with released graph contract; F32/F16/BF16/Q8_0/MXFP4 layouts, split/fused QKV and split gate/up expert matrices. Biased MoE, selected top-k router, clamped SwiGLU, sink attention, sliding/full KV, continuous YaRN, bounded packed-weight streaming, and Harmony text protocol. | Contract tests, official tokenizer/frame/parser fixtures, and tiny two-layer exact-WGSL CPU-software graphs. No downloaded 20B weights, real-checkpoint quality, BF16-operation-by-operation parity, or hardware performance claim. Unsupported MXFP4 subnormal/overflow scale domains fail. |
+| GPT-oss-120B | Same inspected graph family; 36 layers / 128 experts and top-four routing. **Reserved for upgraded hardware** by application admission. | Metadata/layout and tiny 128-expert fixtures only. No full weights downloaded/run. Current 20 GiB GPU + 32 GiB RAM is insufficient for its standard resident weights and does not pass the upgrade gate. Tiny expert count is not 120B execution. |
+| Qwen2.5-VL-7B text | Exact inspected `qwen2vl` profile: 28 layers, hidden 3584, FFN 18944, 28/4 heads, head width 128, vocabulary 152064, base 1e6, M-RoPE sections 16/24/24. Dense biased-QKV graph with exact supported prompt/tokenizer. | Text admission/tokenizer/position/graph tests; no full 7B text-logit parity. Other Qwen-VL generations, sizes, scaled variants, or MoE graphs are not inferred to work. |
+| Qwen2.5-VL-7B still images | Matching separately selected `clip` / `qwen2.5vl_merger` companion GGUF; strict tensor mapping and F32/F16/Q8_0 matrix storage with F32 norm/bias vectors. Custom WebGPU patch encoder/transformer/merger, antialiased bicubic resize, embedding insertion and 3-axis M-RoPE. | Independent reduced NumPy/SciPy encoder and exact-WGSL CPU-software replay. Bounded one-image route: up to 256 patches / 64 image tokens / 50,176 resized pixels. No full checkpoint image-conditioned logits, physical browser decoding/capture, video, or real-image accuracy qualification. See [QWEN_VL_STATUS.md](QWEN_VL_STATUS.md). |
+| Custom LittleBit | Existing exact packed-factor representation | Requires its custom metadata/shapes/encodings. Not interchangeable with arbitrary low-bit formats or MXFP4; RAM-backed streaming remains unsupported. |
+| Legacy NHSC1 | Existing host reconstruction before GPU upload | Separate from direct compressed inference; inherited format contract remains in effect. |
+| Experimental F16TRI1 direct compression | Explicitly selected pinned SmolLM2-135M-Instruct reference; 128-token total prompt-plus-reply cap | Frozen scoped reference only. Q8 NHD1 direct chat is still gated; unknown formats do not gain support. |
+
+Ordinary dense GGUF matrix implementations include F32, F16, BF16, Q4_0, Q4_1, Q5_0, Q5_1, Q8_0, Q4_K, Q5_K, and Q6_K. Every tensor still needs an accepted role, shape, row alignment, and complete consumption. IQ/TQ, repacked Q4 layouts, arbitrary new GGUF types, Safetensors, PyTorch weights, and split GGUF sets are not generic input routes. MXFP4 is specific to the GPT-oss backend. A filename extension or quantization label never grants compatibility.
+
+The ordinary application's allocated context is capped at 4096 tokens and constrained further by the model/memory plan. Model-advertised 128K/131K/262K training windows do not bypass this limit. F16TRI1 keeps its separate 128-token cap. Gemma sliding layers currently retain full-sized KV allocation; correct masking is not a compressed sliding-cache claim.
+
+## Application features
+
+| Feature | Current implementation/evidence | Boundary |
+| --- | --- | --- |
+| GPU dispatch batching | Same one-token WGSL/dispatch order in fewer compute passes; unchanged static-uniform cache. Tiny native software graph matched logits/hidden/KV bit-for-bit. | No measured Radeon utilization/throughput target. |
+| Optional RAM-backed GPU streaming | Quantized host-byte cache, row-aligned GPU tiles, explicit actual-RAM declaration, bounded cache/reservations, default GPU-only. Dense routes and separate GPT-oss expert reader are integrated separately. | Computes on GPU; does not create shared VRAM or guarantee useful speed. 75% declared capacity policies are managed budgets, not device-memory measurements or OOM guarantees. Exact tiny production dense/Gemma streamed-vs-resident and GPT-oss cached-vs-uncached software-GPU comparisons pass; final composed and native checks bind the accepted release hash. |
+| Local expression estimates | Two real bundled ONNX files, pinned ONNX Runtime Web WASM, dedicated default-off worker, consent/load/capture controls and verified local-folder route. | CPU/WASM; real-face accuracy/fairness and live-browser camera untested. Uncertain appearance labels never prove internal emotion. |
+| Optional expression tone cues | Default-off, session-only option adds only a fresh uncertain label to local chat. Explicit self-reported mood takes precedence; online route excluded. | No image transmission to the LM. Transient expression context is excluded from adapter capture/backups; no emotion or safety inference guarantee. |
+| Removed general vision | Identity/enrollment/gallery/pack/scene/object/animal and old online camera-uploader code removed from this release composition. | User-selected Qwen image support is separate and does not silently enable capture or sharing. |
+| Voice | Browser on-device/ordinary STT and local/browser TTS, plus separately configured API routes; deterministic lifecycle/disconnect/interrupt tests. | Browser recognition may be online outside strict offline mode, uses browser/OS default microphone, and depends on installed speech resources. No voice-quality or live-device guarantee. [VOICE.md](VOICE.md) |
+| Model Downloads | Explicit directory/download actions; source/revision/size/SHA pinning, streaming writes, cancellation and integrity failures. | No automatic download or credentials. Real browser picker/CORS and physical transfer unqualified. Integrity is not model compatibility. |
+| Names, memory, RAG and feedback | Existing local stores and explicit save/review/consent controls; session snapshot saves names/conversation/approved memory before training. | RAG/prompt retrieval is separate from changing weights; private backups require care. |
+| End Session learning | Real output-head LoRA-style DPO/positive-answer trainer, model-hash-scoped active/previous checkpoints, held-out/regression promotion gate and explicit restore/cancel/save-only controls. | Transformer weights stay frozen. Approved and supported text data only; no universal all-model training or real-model reasoning improvement claim. Final integrated receipt passed; see release status. [SESSION_LEARNING.md](SESSION_LEARNING.md) |
+| Workspace/lifecycle | Cancellation, persistence, model replacement, stale ownership, media independence, settings and backups checked by Node/vm/jsdom suites. | Mock storage/media/WebGPU checks do not establish browser rendering, real permission handling, hardware stability, or absence of bugs. |
+
+## Numerical evidence: keep comparisons distinct
+
+### Smol proof files
+
+`qa/smol_independent/ACCEPTANCE_RECEIPT.json` covers positions 0–7 and a 49,152-token vocabulary for exact SmolLM2-135M-Instruct F16 and Q8_0 files. Inherited-host versus independent NumPy logits match exactly. Against llama.cpp b11521, maximum absolute differences are approximately 0.02457 (F16) and 0.72781 (Q8_0), with all eight top-1 choices matching. A separate 466-token corpus matches the GGUF tokenizer. This is not full perplexity, bitwise llama.cpp parity, long-context, or browser evidence.
+
+### Final actual Smol software-WebGPU prefix
+
+`qa/real_smol/RESULT.json` runs the unchanged production resident graph and exact shaders from the final HTML through CPU Vulkan SwiftShader using the actual full 30-layer F16 and Q8_0 135M checkpoints. Two plain prefix positions per format yield finite full-vocabulary logits and 2/2 top-1 agreement with llama.cpp b11521. The same-format CPU maximum differences reach approximately 0.03100 (F16) and 0.58432 (Q8_0); there is no declared near-equality threshold or bitwise CPU-parity claim. The F16 native rows match retained earlier native artifacts bitwise.
+
+A same-stored-value F32 export, verified across all 272 Q8/F32 tensors, reduces the Q8 comparison errors to approximately 0.000168 and 0.002960. This strongly supports activation/dot precision as the dominant difference; it is not complete layerwise proof. These two-prefix tests do not exercise generated conversation, all browser startup/health gates, streaming, compressed inputs, training, long context, or physical GPU performance. No additional model was downloaded.
+
+### Gemma3 synthetic graph
+
+`qa/gemma/numeric_receipt.json` records six-layer, eight-position, 288-vocabulary synthetic F32/Q4_0 graphs with byte-exact host/NumPy agreement. Its llama.cpp comparison is **not exact**: the Q4_0 case has about 0.08345 maximum absolute error and 7/8 matching top-1 tokens. The mismatch occurs at zero-based position 2: host top token 3 versus llama.cpp token 147; their top-two margins are approximately 0.00719941 and 0.01457512, respectively, and that row's maximum absolute difference is 0.04203159. The source-array hashes and exact values are in [GEMMA_NUMERICAL_CAVEAT.json](GEMMA_NUMERICAL_CAVEAT.json). Do not describe this as full reference parity.
+
+A follow-up arithmetic isolation (`qa/gemma/q4_arithmetic_audit/receipt.json`) reproduced the direct-Q4 discrepancy and expanded the same stored Q4/Q8 values into F32, with all 80 tensors verified bit-for-bit against llama.cpp dequantizers. On the same oracle IDs/context, that path has 8/8 matching top-1 tokens and maximum absolute error 0.00261681, about 32× smaller. Actual llama.cpp CPU traits/dot calls confirm that its direct-Q4 path quantizes activations to Q8_0, while this custom graph uses F32 activations. This explains the dominant difference without changing stored weights; residual arithmetic differences remain. It does not establish bitwise parity or real-checkpoint accuracy.
+
+A different receipt, `qa/gemma/native_graph_receipt.json`, executes production JavaScript/QuantGPU and exact WGSL through CPU Vulkan SwiftShader: 4,366 dispatches, reset/repeat and queued-prefill checks, softcap checks, and complete buffer cleanup. Its worst recorded row error is about 0.00164. That is synthetic software-adapter evidence, not the 27B model or a browser/Radeon run. Metadata/tokenizer evidence uses a bounded public 27B QAT header, not complete weights.
+
+### GPT-oss and Qwen-VL synthetic graphs
+
+`qa/gpt_oss/native_receipt.json` records four tiny incremental graphs with 4/32/128 expert layouts, six positions crossing the sliding ring, forced cache eviction, reset and disposal. Its independent scalar comparison has a worst absolute error of about 4.47e-8. The current receipt records 3,860 dispatches; historical reports may have older counts. Separate 17-dispatch kernel evidence covers matrix formats/router/SwiGLU/sink attention. These FP32-activation fixtures do not establish real 20B/120B quality or the official BF16 intermediate semantics.
+
+Qwen's reduced CPU reference has maximum absolute error about 1.93e-7. Exact-WGSL vision replay on CPU SwiftShader records about 1.80e-6 for F32 and 2.38e-4 for F16; separate F32/F16/Q8_0 matmul tests cover unaligned scale words and partial tiles. The fixtures have only two vision layers and 24 patches, not a real 7B checkpoint.
+
+## Evidence map and remaining release gates
+
+- Smol: `qa/real_smol/RESULT.json`, `qa/real_smol/REPORT.md`, `patches/compatibility/smol_provenance.json`, `qa/smol_independent/ACCEPTANCE_RECEIPT.json`, `FINAL_COMPATIBILITY_REBIND.json`.
+- Mistral: `patches/mistral/RESULT.json`, `tests.tap`, `native_rotary_receipt.json`, and source provenance.
+- Gemma3: `qa/gemma/ACCEPTANCE_RECEIPT.json`, `numeric_receipt.json`, `native_graph_receipt.json`, `tokenizer_receipt.json`, `target_metadata_receipt.json`.
+- GPT-oss: `qa/gpt_oss/native_receipt.json`, `kernel_receipt.json`; `tests/gpt_oss_contract.test.cjs`, router and Harmony suites.
+- Qwen-VL: `qa/qwen_vl_numerical.json`, `qwen_vl_gpu_native_f32.json`, `qwen_vl_gpu_native_f16.json`, `qwen_vl_quant_native.json`, and importer/tokenizer/UI suites.
+- Expression: [EXPRESSION_ONLY.md](EXPRESSION_ONLY.md), `qa/expression_runtime.json`, expression/lifecycle tests.
+- Offload: `patches/offload/RESULT.json`, `native_tiles_receipt.json`, `production_native_receipt.json`, `gpt_host_native_receipt.json`; final composed checks passed.
+- Session learning: `qa/session_learning/`; final composed checks passed.
+- Final native checks: `qa/FINAL_NATIVE_SOFTWARE_RECEIPT.json`, `qa/FINAL_OFFLOAD_NATIVE_RECEIPT.json`; full final evidence index `qa/FINAL_INTEGRATION_RESULT.json`.
+- Final build, aggregate checks, packaged identities and explicit skips: [RELEASE_STATUS.md](RELEASE_STATUS.md).
+
+Before a broader model support claim, establish exact-file metadata/tensor consumption, tokenizer/rendered-prompt parity, independent operation and next-token graph comparisons, appropriate image-conditional evidence, cancellation/memory boundaries, and actual browser/device execution. Use [RADEON_TEST_PLAN.md](RADEON_TEST_PLAN.md) to record TTFT, prefill, decode, memory, and correctness separately. Passing source/synthetic tests does not guarantee factual accuracy, image accuracy, speed, or a GPU-utilization percentage.

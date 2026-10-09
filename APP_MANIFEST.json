@@ -1,0 +1,190 @@
+{
+  "candidateSHA256": "d1d45f1825852cfb20b80a868101820cdb89f504d8eeff707bed8c797177db93",
+  "files": [
+    {
+      "path": "NexusAI.html",
+      "bytes": 4084777,
+      "sha256": "d1d45f1825852cfb20b80a868101820cdb89f504d8eeff707bed8c797177db93"
+    },
+    {
+      "path": "README.md",
+      "bytes": 9541,
+      "sha256": "c2b798db5e5be4135bf55a4fba3bfef02e16549047fe1c5de848195bf0b1998f"
+    },
+    {
+      "path": "assets/models/face_detection_yunet_2023mar.onnx",
+      "bytes": 232589,
+      "sha256": "8f2383e4dd3cfbb4553ea8718107fc0423210dc964f9f4280604804ed2552fa4"
+    },
+    {
+      "path": "assets/models/facial_expression_recognition_mobilefacenet_2022july.onnx",
+      "bytes": 4791892,
+      "sha256": "4f61307602fc089ce20488a31d4e4614e3c9753a7d6c41578c854858b183e1a9"
+    },
+    {
+      "path": "assets/pretrained_manifest.json",
+      "bytes": 4690,
+      "sha256": "b09901c5a9cd64174458ec6d4eb3892d804b2a065856d654e9574bc6194ba4b5"
+    },
+    {
+      "path": "assets/runtime/ort-wasm-simd-threaded.mjs",
+      "bytes": 20856,
+      "sha256": "30dd851d9c00622940500f71ddd2ff8820c5cb65270816080175b958705385a8"
+    },
+    {
+      "path": "assets/runtime/ort-wasm-simd-threaded.wasm",
+      "bytes": 11210254,
+      "sha256": "71aef04959c5c1b6de461b6538e2058e306610034a85aad2742d0c7fd4533fe4"
+    },
+    {
+      "path": "assets/runtime/ort.wasm.min.mjs",
+      "bytes": 48259,
+      "sha256": "6ef726f355b791129f7ddf3f62e7877a16b9b777abe87004b8ab306e6b9cf265"
+    },
+    {
+      "path": "assets/workers/expression_worker.js",
+      "bytes": 30807,
+      "sha256": "0ebbe68434490ebe11c44b428d741e1e5b55c02ac0448c2cf9d209e5a07a14c4"
+    },
+    {
+      "path": "docs/APPEARANCE.md",
+      "bytes": 932,
+      "sha256": "c0265e6ceb18ba6b9c19b7df9c305ee6698f601196109cff2b5e3453c4e1bcfc"
+    },
+    {
+      "path": "docs/BUILD.md",
+      "bytes": 6374,
+      "sha256": "1cbb8bb0644298c628f1e3bb2c17a6f56b03f6f83435a4abe90f5944bee0a95d"
+    },
+    {
+      "path": "docs/CAPABILITIES.md",
+      "bytes": 16453,
+      "sha256": "cd7323f5b36863f561808044fbdcb95ff93ae6e123d60acd9585c3c1a65b1f48"
+    },
+    {
+      "path": "docs/CODEC.md",
+      "bytes": 6867,
+      "sha256": "0c8f8d9769a334027a666f26b0beb013fcdf39398a4a08448a9f6366f4acb233"
+    },
+    {
+      "path": "docs/COMPRESSED_MODE.md",
+      "bytes": 2382,
+      "sha256": "0b6323fd3253244679d1cb758294893e413589b2356faaac97c6c459eaf7b0e9"
+    },
+    {
+      "path": "docs/EXPRESSION_ONLY.md",
+      "bytes": 8595,
+      "sha256": "2d7f273b382ccdf7565c71eeba53280d6718532d2afa2581d0fd2f816a5feffc"
+    },
+    {
+      "path": "docs/GEMMA_NUMERICAL_CAVEAT.json",
+      "bytes": 2102,
+      "sha256": "eaed29297a92616e71275a372a8969dd1f04ba038645bd427558e2d6af0af6cd"
+    },
+    {
+      "path": "docs/INTEGRATION.md",
+      "bytes": 3885,
+      "sha256": "93d31e787aa638726dd06d992d8a40515871da0752b1da4394191a99ebc09740"
+    },
+    {
+      "path": "docs/LONG_CONTEXT_RESEARCH.md",
+      "bytes": 2569,
+      "sha256": "8a20993fa325cb0c86e3daee04308064ebccece138704e21508b14e29a5ea62e"
+    },
+    {
+      "path": "docs/MODEL_PROVENANCE.md",
+      "bytes": 2339,
+      "sha256": "1448cf5b67a0ee9383b292e35c35d6097944d862cd3c3ec4703a304892f80ae5"
+    },
+    {
+      "path": "docs/PUBLISHING.md",
+      "bytes": 1304,
+      "sha256": "df3b89e1bddb1efe2d46337ee0f0cc6d1faeab58ca3248217a97bc5d2c40360b"
+    },
+    {
+      "path": "docs/Q8_KERNEL_CONTRACT.md",
+      "bytes": 2092,
+      "sha256": "43464cb60c7ae1de6346ef648681a178c2e707c1f641d883c14e27bc23552677"
+    },
+    {
+      "path": "docs/QWEN_VL_STATUS.md",
+      "bytes": 7474,
+      "sha256": "0109f0ffb47772a4f91debff442c27fe1d006c363f4a43d00c2970767560ec2a"
+    },
+    {
+      "path": "docs/RADEON_TEST_PLAN.md",
+      "bytes": 11481,
+      "sha256": "7f29b80f2168997ece33bfb30aaa05cbfea5b7b6be4a4f41dafa83e64256d49b"
+    },
+    {
+      "path": "docs/RELEASE_PACKAGING.md",
+      "bytes": 7834,
+      "sha256": "d084ba3fb8b60ed665d9ad1962c76fd5d31eb38cc30865e46df6ae89a34a693c"
+    },
+    {
+      "path": "docs/RELEASE_STATUS.md",
+      "bytes": 6550,
+      "sha256": "a20c970b70f7e6d86e83debc87b7747630382e1aee377a2eaf002dad6589d5be"
+    },
+    {
+      "path": "docs/ROADMAP.md",
+      "bytes": 525,
+      "sha256": "f967b25b5e604c35529394451e266247a4b82f0b4ada8776e19bbbd9817b237f"
+    },
+    {
+      "path": "docs/SESSION_LEARNING.md",
+      "bytes": 5465,
+      "sha256": "23e633a3cd6e9d865c1aedb2d23bd67616661f14b99f13faa3c73916e3df0cfd"
+    },
+    {
+      "path": "docs/SHARED_BACKEND.md",
+      "bytes": 9033,
+      "sha256": "d579c15f62484c741c5fffe2d7ccc590dea57cbca07702d608fd0b80fb4de58b"
+    },
+    {
+      "path": "docs/SMOL_RELEASE.md",
+      "bytes": 5226,
+      "sha256": "eb1350560c4c47842716f51b18cf6d0cf36d4eb97ee635fe8e7d4e4cd961d408"
+    },
+    {
+      "path": "docs/VOICE.md",
+      "bytes": 3241,
+      "sha256": "81bfc0465a0cf0afb768610fcd43911997409d4fae212e50ca58c89c71f47d9f"
+    },
+    {
+      "path": "docs/WEIGHT_STREAMING.md",
+      "bytes": 3981,
+      "sha256": "95d1ef874c452b036487742702f290d263fb92cc44ad101495524cf30ccd65c9"
+    },
+    {
+      "path": "licenses/FER-Apache-2.0.txt",
+      "bytes": 11358,
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    },
+    {
+      "path": "licenses/FER-license-declaration.md",
+      "bytes": 2417,
+      "sha256": "1636682ec2724075d72451d76f6106f6716c7486628fbbe8adead26bb3b2bac3"
+    },
+    {
+      "path": "licenses/ONNXRuntime-MIT.txt",
+      "bytes": 1073,
+      "sha256": "2f07c72751aed99790b8a4869cf2311df85a860b22ded05fa22803587a48922c"
+    },
+    {
+      "path": "licenses/ONNXRuntime-ThirdPartyNotices.txt",
+      "bytes": 326866,
+      "sha256": "e9e90971a8e75a9a8ac0c6412e29c1202d079998389915aa485f46c816c3b4cc"
+    },
+    {
+      "path": "licenses/OpenCV-Apache-2.0.txt",
+      "bytes": 11358,
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    },
+    {
+      "path": "licenses/YuNet-MIT.txt",
+      "bytes": 1085,
+      "sha256": "c83b8120c50ccbd4c4f96edf53141bdd566ebb8f8e9227e415326aa1b1aba958"
+    }
+  ]
+}
