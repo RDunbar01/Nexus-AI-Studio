@@ -14,16 +14,27 @@ The application combines a custom JavaScript/WGSL inference engine with architec
 
 ## Contents
 
-1. [Release artifacts](#release-artifacts)
-2. [System architecture](#system-architecture)
-3. [Model support](#model-support)
-4. [Inference and memory](#inference-and-memory)
-5. [Memory and learning](#memory-and-learning)
-6. [Voice and expression](#voice-and-expression)
-7. [Validation and numerical results](#validation-and-numerical-results)
-8. [Installation and reproducibility](#installation-and-reproducibility)
-9. [Privacy and operational boundaries](#privacy-and-operational-boundaries)
-10. [Attributions and research](#attributions-and-research)
+1. [Development approach](#development-approach)
+2. [Release artifacts](#release-artifacts)
+3. [System architecture](#system-architecture)
+4. [Model support](#model-support)
+5. [Inference and memory](#inference-and-memory)
+6. [Memory and learning](#memory-and-learning)
+7. [Voice and expression](#voice-and-expression)
+8. [Validation and numerical results](#validation-and-numerical-results)
+9. [Installation and reproducibility](#installation-and-reproducibility)
+10. [Privacy and operational boundaries](#privacy-and-operational-boundaries)
+11. [Attributions and research](#attributions-and-research)
+
+## Development approach
+
+Nexus AI Studio was developed by Richard Dunbar using AI-assisted coding. AI tools supported implementation, debugging, code review and documentation, helping him explore complex ideas and reduce repetitive coding work. Richard directed the project, made design and integration decisions, and remained responsible for deciding which changes to keep.
+
+For this project, the single-file application supports that workflow. Keeping the interface, state management and runtime logic together helps Richard give AI tools a coherent view of the application and trace how changes affect interconnected features. This reflects the way he works on Nexus; the best structure for another project will depend on its needs and development tools.
+
+The application has been shaped through hundreds of **build–measure–learn iterations**, with feedback from end users informing what to change and where to focus next. The process is to build a change, measure and review its behavior, learn from the results and user feedback, and use those findings to guide the next revision.
+
+AI-generated code still requires human review, testing and validation. The checks, numerical results and qualification limits recorded in this README remain the basis for assessing this release.
 
 ## Release artifacts
 
@@ -414,6 +425,8 @@ This application does not demonstrate autonomous Nexus OS scheduling, safe kerne
 ## Attributions and research
 
 ### Project and component credit
+
+**Development credit:** AI-assisted coding under Richard Dunbar’s human project direction.
 
 | Contributor or project | Role |
 |---|---|
