@@ -1,0 +1,20 @@
+{
+  "product": "Nexus AI",
+  "version": "Candidate25",
+  "stage": "draft next-release package staging; not published or merged",
+  "previous_release": "Candidate24 retained unchanged",
+  "source_manifest": "RELEASE_SOURCE_SHA256.json inside payload",
+  "producer_validation": "RELEASE_VALIDATION.json and qualification/candidate25/receipt.json inside payload",
+  "integration_validation": "CANDIDATE25_INTEGRATION_VALIDATION.json",
+  "source_zip_sha256": "8e2ea8592ede45eedcc6562de594bc33c62e3e2a88657641be9045380b5c2b00",
+  "native_runtime_revision": "nexus-conversation-v1",
+  "native_stdio_protocol": 3,
+  "existing_native_binary_rebuild_required_for_new_features": true,
+  "physical_windows_radeon_tested": false,
+  "enterprise_approved": false,
+  "limitations": [
+    "Current Windows HIP/Radeon and WebGPU qualification outstanding.",
+    "Full Mistral7B/Ministral14B quality, performance and long-context acceptance outstanding.",
+    "Historical CPU timing/parity receipts do not qualify the complete Candidate25 source."
+  ]
+}

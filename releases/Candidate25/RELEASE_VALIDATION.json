@@ -1,0 +1,63 @@
+{
+  "product": "Nexus AI",
+  "version": "Candidate25",
+  "enterprise_approved": false,
+  "status": "Local regression suites passed; target-platform qualification outstanding",
+  "current_receipt": "qualification/candidate25/receipt.json",
+  "test_execution_counts": {
+    "python": {
+      "tests_run": 496,
+      "passed": 495,
+      "skipped": 1,
+      "seconds": 201.448,
+      "skip_reasons": [
+        "test_actual_recovered_littlebit_header_when_available (test_catalog.LittleBitHeaderTests.test_actual_recovered_littlebit_header_when_available) ... skipped 'Real recovered user model not bundled with tests'"
+      ]
+    },
+    "native": {
+      "tests_run": 72,
+      "passed": 71,
+      "skipped": 1,
+      "seconds": 36.011,
+      "skip_reasons": [
+        "test_official_golden_parity (test_tekken.TekkenTests.test_official_golden_parity) ... skipped 'Set TEKKEN_JSON for pinned official-vocabulary parity'"
+      ]
+    },
+    "tokenizers": {
+      "tests_run": 17,
+      "passed": 15,
+      "skipped": 2,
+      "seconds": 0.028,
+      "skip_reasons": [
+        "test_official_token_ids (test_tokenizer_extended.CanonicalParity.test_official_token_ids) ... skipped 'optional official vocabulary/tiktoken reference required'",
+        "test_official_token_ids (test_tokenizer_extended.Qwen35CanonicalParity.test_official_token_ids) ... skipped 'optional official Qwen3.5 tokenizer.json/tokenizers reference required'"
+      ]
+    },
+    "web": {
+      "scripts": 37,
+      "passed": 37,
+      "failed": 0
+    },
+    "real_launcher_http_native_flow": {
+      "tests_run": 3,
+      "passed": 3,
+      "skipped": 0,
+      "seconds": 2.251,
+      "skip_reasons": []
+    }
+  },
+  "limitations": [
+    "Native batch remains 1; no native Flash Attention or reduced-precision KV",
+    "No universal model compatibility or LM Studio API parity",
+    "No enterprise identity/RBAC or remote multi-user service",
+    "Historical receipts do not qualify this source version"
+  ],
+  "outstanding": [
+    "Current Windows HIP compilation and RX7900XT/XTX execution",
+    "Physical WebGPU qualification",
+    "Full exact Mistral7B and Ministral14B accuracy/performance and long-context acceptance",
+    "Windows11 desktop installation, WebView2, redirected Desktop and rollback acceptance",
+    "Extended soak/crash/disk-pressure tests",
+    "Enterprise deployment security, signing, dependency governance and license permission"
+  ]
+}

@@ -21,5 +21,3 @@ restriction does not override that component's permissions or obligations.
 Written consent for Nexus-owned software does not clear third-party model,
 training-data, patent, trademark, privacy or other rights. Review the actual
 intended distribution and use separately.
-
-The exact previous root license is preserved at docs/licenses/LICENSE_PREVIOUS for earlier and separately licensed material. Historical permissions remain unchanged.
