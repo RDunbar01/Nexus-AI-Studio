@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "release": "Candidate25",
+  "scope": "Full distribution installation on Linux; no Windows/desktop/GPU qualification",
+  "checks": {
+    "component_limits_and_runtime_state_exclusion": true,
+    "full_package_update_preserves_workspace_and_backup": true,
+    "full_package_fresh_has_no_saved_data": true,
+    "installed_source_hashes": true,
+    "installed_release_verifier": true,
+    "fresh_installed_server_status_diagnostics_shutdown": true
+  },
+  "payload_files": 408,
+  "part_sizes": [
+    10000000,
+    2819393
+  ],
+  "manifest_sha256": "5674b01e8d89bab7db60bd6565ec62b695c9a29d15018379ca62e6e396685fc5"
+}

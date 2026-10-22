@@ -1,0 +1,8 @@
+Nexus AI Independent Integration
+Project direction: Rich Dunbar / Nexus Emerging Technology.
+This Nexus release is not offered under Apache License 2.0. Nexus-owned software may be used only for personal, non-commercial purposes. Any other use, including commercial use, modification or redistribution, requires express written consent from the rights holder. Third-party code, models, datasets and separately licensed components retain their own licenses and notices. Previously granted rights and rights that cannot lawfully be restricted remain unchanged.
+Nexus.cpp retains its MIT license in native/Nexus.cpp/LICENSE and source provenance notices.
+The preserved Nexus AI browser application includes prior notices and dependencies; see THIRDPARTY/ and its embedded license notices.
+Optional pywebview, Jinja2 and regex are separately licensed upstream dependencies, installed only after explicit isolated-runtime consent. They are not vendored in this source distribution.
+Hugging Face model licenses are independent of this application. A permissive model weight license does not certify the training data or the entire AI system as open source.
+The recovered LittleBit sample used during testing is not bundled with this release.

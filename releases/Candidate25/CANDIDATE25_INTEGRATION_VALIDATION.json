@@ -1,0 +1,148 @@
+{
+  "schema": 1,
+  "product": "Nexus AI",
+  "version": "Candidate25",
+  "status": "Focused local integration checks passed; independent final-package review separate",
+  "date_utc": "2026-10-22T19:34:49.007887+00:00",
+  "enterprise_approved": false,
+  "scope": "Pinned Candidate25 payload unchanged; Git-facing release metadata/docs and release-local installer alias integrated. Linux CPU/local HTTP/DOM/installer checks only.",
+  "source": {
+    "upstream_zip_sha256": "8e2ea8592ede45eedcc6562de594bc33c62e3e2a88657641be9045380b5c2b00",
+    "candidate24_rollback_zip_sha256": "91ea489ff0346408bcc3d6a16d939ad25b11f978c9110a1860035713062cd759",
+    "manifest_sha256": "5674b01e8d89bab7db60bd6565ec62b695c9a29d15018379ca62e6e396685fc5",
+    "source_inventory_sha256": "b1824b4a425c8122315fd628ec8a039d4bced9f9e79b955ceba82be8618787f4",
+    "producer_receipt_sha256": "29d1f5ed83db48a7332ca4f482e15adf167bd5ff20645bb140a7aa70c2a4196e",
+    "payload_files": 408,
+    "inventory_files": 407,
+    "payload_unchanged_from_pinned_source": true
+  },
+  "fresh_checks": {
+    "installer_template_alias_and_companions": true,
+    "cli_help_dry_run_and_cancel": true,
+    "fresh_update_and_explicit_fresh_no_launch": true,
+    "all_408_installed_hashes_verified_after_each_install": true,
+    "all_407_source_hashes_verified_after_tests": true,
+    "update_saved_data_and_backup_preserved": true,
+    "fresh_old_saved_data_retained_only_in_backup": true,
+    "python_installer_registry_logs_metrics_benchmark_contract": {
+      "passed": 53,
+      "failed": 0,
+      "skipped": 0,
+      "seconds": 119.424
+    },
+    "runtime_conversation_cancellation_sampler_qualification_tool_and_real_http": {
+      "passed": 10,
+      "failed": 0,
+      "skipped": 0,
+      "seconds": 15.371
+    },
+    "native_prefill_logits_and_sampler_oracles": {
+      "passed": 2,
+      "failed": 0,
+      "skipped": 0,
+      "seconds": 6.01
+    },
+    "browser_scripts": {
+      "passed": 7,
+      "failed": 0,
+      "scripts": [
+        "test_native_settings25.cjs",
+        "test_native_chat.cjs",
+        "test_native_stream.cjs",
+        "test_plain_chat.cjs",
+        "test_recovery23.cjs",
+        "test_job_lifecycle22.cjs",
+        "test_benchmark_save_contract.cjs"
+      ]
+    },
+    "cpu_binary_built_in_isolated_test_install_only": true,
+    "cpu_binary_sha256": "e0028c461b14ae91ce676410dd85036d38eca90c16acd664437cfd3b4a82f727"
+  },
+  "environment": {
+    "system": "Linux",
+    "machine": "x86_64",
+    "python": "3.12.14",
+    "Jinja2": "3.1.6",
+    "regex": "2026.9.29",
+    "numpy": "2.3.5",
+    "node": "v24.19.0",
+    "compiler": "g++ (Debian 14.2.0-19) 14.2.0"
+  },
+  "resolved_test_environment_issue": "Initial runtime attempt used the default interpreter without Jinja2: 8 passed and 2 failed on template availability. The complete 10-test runtime group passed after selecting an existing isolated environment with Jinja2 3.1.6. No source change, package installation or dependency upgrade was needed.",
+  "producer_evidence": {
+    "separate_receipt": "qualification/candidate25/receipt.json inside the payload; outer RELEASE_VALIDATION.json",
+    "full_suite_reexecuted": false,
+    "counts_are_test_executions_not_unique_behaviors": true,
+    "counts": {
+      "python": {
+        "tests_run": 496,
+        "passed": 495,
+        "skipped": 1,
+        "seconds": 201.448,
+        "skip_reasons": [
+          "test_actual_recovered_littlebit_header_when_available (test_catalog.LittleBitHeaderTests.test_actual_recovered_littlebit_header_when_available) ... skipped 'Real recovered user model not bundled with tests'"
+        ]
+      },
+      "native": {
+        "tests_run": 72,
+        "passed": 71,
+        "skipped": 1,
+        "seconds": 36.011,
+        "skip_reasons": [
+          "test_official_golden_parity (test_tekken.TekkenTests.test_official_golden_parity) ... skipped 'Set TEKKEN_JSON for pinned official-vocabulary parity'"
+        ]
+      },
+      "tokenizers": {
+        "tests_run": 17,
+        "passed": 15,
+        "skipped": 2,
+        "seconds": 0.028,
+        "skip_reasons": [
+          "test_official_token_ids (test_tokenizer_extended.CanonicalParity.test_official_token_ids) ... skipped 'optional official vocabulary/tiktoken reference required'",
+          "test_official_token_ids (test_tokenizer_extended.Qwen35CanonicalParity.test_official_token_ids) ... skipped 'optional official Qwen3.5 tokenizer.json/tokenizers reference required'"
+        ]
+      },
+      "web": {
+        "scripts": 37,
+        "passed": 37,
+        "failed": 0
+      },
+      "real_launcher_http_native_flow": {
+        "tests_run": 3,
+        "passed": 3,
+        "skipped": 0,
+        "seconds": 2.251,
+        "skip_reasons": []
+      }
+    }
+  },
+  "limits": {
+    "data_parts_max_bytes": 10000000,
+    "data_part_sizes": [
+      10000000,
+      2819393
+    ],
+    "all_uncompressed_components_strictly_less_than_bytes": 20000000,
+    "largest_payload_component_bytes": 6928627
+  },
+  "license": "Individual personal noncommercial use only; other use, modification or redistribution requires express written consent, preserving third-party/prior-grant/mandatory-law rights.",
+  "preserved_fixes": {
+    "benchmark_save": "Four files byte-identical and server parity validator/save branch unchanged; focused live HTTP plus Node contract tests passed.",
+    "cpu": "Fourteen overlay files byte-identical; Q8/F32 and last-token prefill optimization retained with cancellation/cache additions. Fresh focused prefill-logit oracle passed. Historical whole-source timing/exact-parity receipts remain historical."
+  },
+  "unqualified": [
+    "Current Windows HIP compilation and RX7900XT/XTX execution",
+    "Physical WebGPU qualification",
+    "Full exact Mistral7B and Ministral14B accuracy/performance and long-context acceptance",
+    "Windows11 desktop installation, WebView2, redirected Desktop and rollback acceptance",
+    "Extended soak/crash/disk-pressure tests",
+    "Enterprise deployment security, signing, dependency governance and license permission"
+  ],
+  "not_performed": [
+    "No Windows GUI, HIP, Radeon or physical WebGPU execution.",
+    "No full large-model quality/performance or extended soak qualification.",
+    "No new shared-library/C ABI regression run or broad native suite.",
+    "No Git write, merge, deployment or Library replacement in this integration step.",
+    "No model weights, development binaries, runtime state or dependency caches packaged."
+  ]
+}
