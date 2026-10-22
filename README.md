@@ -5,15 +5,15 @@
 This Nexus release is not offered under Apache License 2.0. Nexus-owned software may be used only for personal, non-commercial purposes. Any other use, including commercial use, modification or redistribution, requires express written consent from the rights holder. Third-party code, models, datasets and separately licensed components retain their own licenses and notices. Previously granted rights and rights that cannot lawfully be restricted remain unchanged.
 
 
-> Draft documentation staging: application packages and browser HTML are pending a later verified commit. Any proposed version or trial path below is not a shipped release or live trial. Do not merge until package and link checks pass.
+> Draft next-release staging: the reviewed installer and complete data-part set are included below. This branch is not a published release or live deployment; the pull request remains draft.
 
-**Next-release documentation staging · not a published application update**
+**Candidate24 · next-release package staging · not a published application update**
 
 Local AI workspace with separate custom WebGPU and Nexus.cpp paths. Model admission, resident weights, server health and chat readiness are separate states. A compatible tokenizer, architecture and quantization are required for the selected engine.
 
 ## Current baseline and release status
 
-Verified baseline: **Candidate 23**. Next identifier: **Candidate 24**. Do not tag or label a binary with a new version until its application, installer and package metadata agree.
+Verified starting baseline: **Candidate 23**. The staged source and package advance to **Candidate 24**. Native Windows binary qualification remains separate.
 
 Current audited source includes plain chat with no automatic past-workspace retrieval, stale-reply cancellation, isolated fresh-install mode, local model import and explicit hardware profiles. Native and browser engines do not have identical capabilities. Full Mistral 7B Windows/Radeon operation has not been qualified by these tests.
 
@@ -22,6 +22,12 @@ Current audited source includes plain chat with no automatic past-workspace retr
 [Mistral 7B Instruct v0.3, official model card](https://huggingface.co/mistralai/Mistral-7B-Instruct-v0.3) is a useful first model to consider for Nexus AI when the chosen backend supports its exact architecture, tokenizer and quantization. The official model card distributes Safetensors, not a ready-to-load GGUF: select a trustworthy compatible GGUF conversion for the GGUF loader, check its provenance and license, and validate loading before calling the model ready. Do not download every Safetensors shard expecting the GGUF loader to accept it.
 
 Radeon RX 7900 XT and XTX nominal VRAM specifications are 20 GB and 24 GB respectively; these are not guaranteed available budgets. Runtime allocations, context/KV cache and other processes reduce usable capacity. A manual profile is a declared configuration, not hardware detection or a benchmark result.
+
+## Install the staged package
+
+Download all files in [releases/Candidate24](releases/Candidate24), retaining the directory structure. Keep both Nexus_AI_Data_001.nxd and Nexus_AI_Data_002.nxd with Nexus_AI_Manifest.json, the installer, GUI, artwork and dependency helper. Each data part is at most 10,000,000 bytes. With Python 3.10+ already installed, run [Install_Nexus_AI.py](releases/Candidate24/Install_Nexus_AI.py); terminal fallback: python Install_Nexus_AI.py --cli. Review the displayed installation plan before confirming. Use --no-launch to install without opening the app. See [README_FIRST.txt](releases/Candidate24/README_FIRST.txt) and [the package README](releases/Candidate24/README.md). The app source and HTML are carried in the verified data parts, not deployed as a live browser trial.
+
+Independent package review verified the complete inventory, hashes, licensing notices and isolated no-launch installation/extraction. This does not qualify native Windows execution, physical hardware or Microsoft Office rendering.
 
 ## Start and inspect the original project
 

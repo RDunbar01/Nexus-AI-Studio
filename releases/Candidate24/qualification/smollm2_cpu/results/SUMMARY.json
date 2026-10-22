@@ -1,0 +1,53 @@
+{
+  "scope": "Single-sample Linux cloud CPU diagnostic, not a reliable speedup benchmark or Radeon/Windows/WebGPU qualification",
+  "model": "SmolLM2-135M-Instruct Q8_0",
+  "model_sha256": "5a1395716f7913741cc51d98581b9b1228d80987a9f7d3664106742eb06bba83",
+  "tokens_equal": true,
+  "text_equal": true,
+  "exact_fixture_full_logit_comparisons": 26,
+  "measurements": {
+    "before": {
+      "server_ready_seconds": 0.31689226999878883,
+      "import_seconds": 5.2407982450095005,
+      "load_seconds": 6.669022381000104,
+      "first_text_seconds": 187.02153009999893,
+      "total_seconds": 223.16628414898878,
+      "prompt_tokens": 18,
+      "completion_tokens": 8,
+      "prefill_seconds": 186.406,
+      "prefill_tps": 0.09656341534070792,
+      "decode_forward_steps": 7,
+      "decode_seconds": 36.0584,
+      "decode_tps": 0.19412952321789098,
+      "binary_sha256": "6febe320cdd94c2c17bc81d1aeef48556e42716d083e1d3be0918542f7daf7fe"
+    },
+    "after": {
+      "server_ready_seconds": 2.937355579007999,
+      "import_seconds": 5.415158886011341,
+      "load_seconds": 2.5664027699967846,
+      "first_text_seconds": 41.65742538399354,
+      "total_seconds": 73.15655479198904,
+      "prompt_tokens": 18,
+      "completion_tokens": 8,
+      "prefill_seconds": 41.2098,
+      "prefill_tps": 0.4367893073977549,
+      "decode_forward_steps": 7,
+      "decode_seconds": 31.5095,
+      "decode_tps": 0.2221552230279757,
+      "binary_sha256": "e0a0d13859774130633b0a7ebc14b11bea5e883d25b47969c018ea17d98ce0be"
+    }
+  },
+  "build": {
+    "compiler": "g++ (Debian 14.2.0-19) 14.2.0",
+    "flags": [
+      "-O3",
+      "-std=c++17",
+      "-fopenmp"
+    ],
+    "cpu_threads": 1,
+    "host_reported_cpu": "Intel Xeon Platinum8573C",
+    "os": "Linux6.18.55 x86_64",
+    "default_installer_binary_equivalence_claimed": false,
+    "windows_native_rebuild_required": true
+  }
+}
