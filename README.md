@@ -5,9 +5,9 @@
 This Nexus release is not offered under Apache License 2.0. Nexus-owned software may be used only for personal, non-commercial purposes. Any other use, including commercial use, modification or redistribution, requires express written consent from the rights holder. Third-party code, models, datasets and separately licensed components retain their own licenses and notices. Previously granted rights and rights that cannot lawfully be restricted remain unchanged.
 
 
-> Draft next-release staging: the reviewed installer and complete data-part set are included below. This branch is not a published release or live deployment; the pull request remains draft.
+> The reviewed Candidate25 installer and complete data-part set are available below. Repository availability is not a live browser deployment or Windows/Radeon qualification.
 
-**Candidate25 · hardening candidate · draft package staging, not a published update**
+**Candidate25 · single-user hardening candidate**
 
 Local AI workspace with separate custom WebGPU and Nexus.cpp paths. Model admission, resident weights, server health and chat readiness are separate states. A compatible tokenizer, architecture and quantization are required for the selected engine.
 
@@ -21,7 +21,7 @@ Nexus AI uses its own **WebGPU and Nexus.cpp engines, not a PyTorch backend**. P
 
 ## Current baseline and release status
 
-Verified starting baseline: **Candidate24**. Candidate25 adds single-user hardening and remains a draft, not an enterprise-approved release. [Candidate24](releases/Candidate24) remains unchanged for review and rollback. Current Windows, HIP and physical Radeon/WebGPU qualification remain outstanding.
+Verified starting baseline: **Candidate24**. Candidate25 adds single-user hardening; it is not an enterprise-approved release. [Candidate24](releases/Candidate24) remains unchanged for review and rollback. Current Windows, HIP and physical Radeon/WebGPU qualification remain outstanding.
 
 Current audited source includes plain chat with no automatic past-workspace retrieval, stale-reply cancellation, isolated fresh-install mode, local model import and explicit hardware profiles. Native and browser engines do not have identical capabilities. Full Mistral 7B Windows/Radeon operation has not been qualified by these tests.
 
@@ -31,7 +31,7 @@ Current audited source includes plain chat with no automatic past-workspace retr
 
 Radeon RX 7900 XT and XTX nominal VRAM specifications are 20 GB and 24 GB respectively; these are not guaranteed available budgets. Runtime allocations, context/KV cache and other processes reduce usable capacity. A manual profile is a declared configuration, not hardware detection or a benchmark result.
 
-## Install the staged package
+## Install Candidate25
 
 Download all files in [releases/Candidate25](releases/Candidate25), retaining the directory structure. Keep both Nexus_AI_Data_001.nxd and Nexus_AI_Data_002.nxd with Nexus_AI_Manifest.json, the installer, GUI, artwork and dependency helper. Each data part is at most 10,000,000 bytes. With Python 3.10+ already installed, run [Install_Nexus_AI.py](releases/Candidate25/Install_Nexus_AI.py); terminal fallback: python Install_Nexus_AI.py --cli. Review the displayed installation plan before confirming. Use --no-launch to install without opening the app. See [README_FIRST.txt](releases/Candidate25/README_FIRST.txt) and [the package README](releases/Candidate25/README.md). The app source and HTML are carried in the verified data parts, not deployed as a live browser trial.
 
@@ -45,7 +45,7 @@ The producer's regression logs report 495 Python passes/1 skip, 71 native passes
 
 ## Start and inspect the original project
 
-Use the exact launch instructions accompanying the matching release package. The [preserved previous README](docs/README_PREVIOUS.md) contains the original workflow, research citations, credits, downloads and limitations. Treat its release-specific statements as historical; this staged update does not silently replace its software or relicense dependencies.
+Use the exact launch instructions accompanying the matching release package. The [preserved previous README](docs/README_PREVIOUS.md) contains the original workflow, research citations, credits, downloads and limitations. Treat its release-specific statements as historical; this update does not silently replace its software or relicense dependencies.
 
 ## Evidence and licensing
 
