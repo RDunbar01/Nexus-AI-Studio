@@ -1,6 +1,6 @@
 # Commercial testing and evaluation permission
 
-Rich Dunbar / Nexus Emerging Technology grants the additional permission below for Nexus-owned material in Nexus AI Version 25 (distributed under the existing Candidate25 artifact identifier). This permission supplements the bundled Nexus Personal-Use License; it does not replace licenses for separately licensed material.
+Rich Dunbar / Nexus Emerging Technology grants the additional permission below for Nexus-owned material in Nexus AI Version 25, including its v25-browser-r1 single-file browser packaging and the full application distributed under the existing Candidate25 artifact identifier. This permission supplements the bundled Nexus Personal-Use License; it does not replace licenses for separately licensed material.
 
 Individuals and organizations may download, install, run and make copies reasonably necessary for their own internal commercial testing and evaluation of these releases, including their browser trials. This includes evaluating functionality, performance and suitability for a possible future use.
 

@@ -1,6 +1,6 @@
 # Additional permission for this release
 
-Personal use and internal commercial testing and evaluation are permitted for Nexus-owned material in Nexus AI Version 25 (distributed under the existing Candidate25 artifact identifier). See [COMMERCIAL_EVALUATION_PERMISSION.md](COMMERCIAL_EVALUATION_PERMISSION.md) for the additional permission and its limits. For the permitted testing and evaluation, that permission takes precedence over a conflicting personal-use-only statement below. All other terms and separately licensed rights remain unchanged.
+Personal use and internal commercial testing and evaluation are permitted for Nexus-owned material in Nexus AI Version 25, including its v25-browser-r1 single-file browser packaging and the full application distributed under the existing Candidate25 artifact identifier. See [COMMERCIAL_EVALUATION_PERMISSION.md](COMMERCIAL_EVALUATION_PERMISSION.md) for the additional permission and its limits. For the permitted testing and evaluation, that permission takes precedence over a conflicting personal-use-only statement below. All other terms and separately licensed rights remain unchanged.
 
 ## Original scope and historical notices
 
