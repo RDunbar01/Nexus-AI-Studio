@@ -1,3 +1,9 @@
+# Additional permission for this release
+
+Personal use and internal commercial testing and evaluation are permitted for Nexus-owned material in Nexus AI Version 25 (distributed under the existing Candidate25 artifact identifier). See [COMMERCIAL_EVALUATION_PERMISSION.md](COMMERCIAL_EVALUATION_PERMISSION.md) for the additional permission and its limits. For the permitted testing and evaluation, that permission takes precedence over a conflicting personal-use-only statement below. All other terms and separately licensed rights remain unchanged.
+
+## Original scope and historical notices
+
 # Current release scope and third-party notices
 
 This Nexus release is not offered under Apache License 2.0. Nexus-owned software may be used only for personal, non-commercial purposes. Any other use, including commercial use, modification or redistribution, requires express written consent from the rights holder. Third-party code, models, datasets and separately licensed components retain their own licenses and notices. Previously granted rights and rights that cannot lawfully be restricted remain unchanged.
@@ -21,3 +27,4 @@ restriction does not override that component's permissions or obligations.
 Written consent for Nexus-owned software does not clear third-party model,
 training-data, patent, trademark, privacy or other rights. Review the actual
 intended distribution and use separately.
+
