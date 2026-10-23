@@ -12,13 +12,16 @@
     <p><strong>Version 25</strong></p>
     <p>A local AI workspace for supported language models, using custom WebGPU and Nexus.cpp inference engines.</p>
     <nav aria-label="Nexus AI resources">
+      <a href="https://rdunbar01.github.io/Nexus-AI-Studio/Nexus_AI_Browser.html"><strong>Open the browser trial</strong></a>
       <a href="https://github.com/RDunbar01/Nexus-AI-Studio/tree/main/releases/Candidate25">Download the full application</a>
       <a href="https://github.com/RDunbar01/Nexus-AI-Studio#readme">Read the overview</a>
       <a href="https://github.com/RDunbar01/Nexus-AI-Studio/wiki">Wiki</a>
     </nav>
-    <h2>Local inference and controllable chat</h2>
-    <p>Import local models, check engine compatibility, select a hardware profile and inspect diagnostics. Native protocol 3 adds session-scoped prefix caching, cooperative Stop and New Chat reset.</p>
-    <p>This version requires the complete download and a local service. Use CPython 3.10 or later; the recorded checks used 3.12.14. Its HTML alone is not a hosted Nexus AI trial. Native and browser engines have different model support.</p>
+    <h2>Local GGUF chat with the custom WebGPU engine</h2>
+    <p>Open the trial, choose your GPU profile and memory capacity in Models &amp; settings, then select a local GGUF model and load it for chat. A working WebGPU adapter, sufficient memory and supported model architecture, tensors, quantization and tokenizer are required. No model is bundled. A hardware profile is a declared memory budget, not a free-VRAM measurement or compatibility result.</p>
+    <p>The single HTML file embeds the interface, inference code and tokenizer/template library. This makes the application available for online evaluation without Python, an installer or a build step. Model loading takes additional time. The browser trial does not upload model data, contact a local service or fall back to CPU inference.</p>
+    <p>Nexus.cpp, online services, voice, camera and teacher features are not included in the trial. Download the full local application for its separate capabilities and local service. Use CPython 3.10 or later; the recorded Linux checks used 3.12.14. Nexus AI uses its own inference engines, not a PyTorch backend.</p>
+    <p>Browser packaging revision: v25-browser-r1. Scripted no-network boot checks do not establish full-model GPU quality or performance. The original Version 25 native package and its published hashes remain unchanged.</p>
     <h2>Try related Nexus tools in your browser</h2>
     <ul>
       <li><a href="https://rdunbar01.github.io/Nexus-Little-Bit-Compression-Recovery-/Nexus_Compression_Recovery_Studio_v2_7_Browser.html">Compression &amp; Recovery Studio</a>: low-bit compression and recovery controls.</li>
